@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>"
-    />
-    <title>Hi</title>
-    <style>
-      html {
-        height: 100%;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>" />
+  <title>Hi</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+      background-color: #362945;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 72px;
+      gap: 0.25em;
+    }
+
+    @keyframes wave {
+      from {
+        transform: rotate(315deg) translateY(-0.15em) translateX(0.25em);
       }
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-          'Segoe UI Symbol';
-        background-color: #eee;
-        color: #444;
+
+      to {
+        transform: rotate(345deg) translateY(-0.25em) translateX(0.25em);
       }
-      h1 {
-        font-size: 64px;
-        text-indent: -1em;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>👋 Hi</h1>
-  </body>
+    }
+
+    div:first-child {
+      font-size: 90%;
+      transform-origin: 60% 70%;
+      animation-name: wave;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+
+    div:last-child {
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      color: #ffcd43;
+      text-shadow: 3px 3px 2px #d17220;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div>🖐</div>
+    <div>Hi</div>
+  </main>
+</body>
+
 </html>
